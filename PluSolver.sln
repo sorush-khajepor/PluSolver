@@ -1,7 +1,9 @@
 
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PLUSolver", "PLUSolver\PluSolver.csproj", "{13349A9E-34B1-453B-8236-3729BA081635}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluSolver", "PLUSolver\PluSolver.csproj", "{13349A9E-34B1-453B-8236-3729BA081635}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PluSolverTests", "PluSolverTests\PluSolverTests.csproj", "{09869312-6187-46FF-A808-6FF123F32264}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -13,5 +15,9 @@ Global
 		{13349A9E-34B1-453B-8236-3729BA081635}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{13349A9E-34B1-453B-8236-3729BA081635}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{13349A9E-34B1-453B-8236-3729BA081635}.Release|Any CPU.Build.0 = Release|Any CPU
+		{09869312-6187-46FF-A808-6FF123F32264}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{09869312-6187-46FF-A808-6FF123F32264}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{09869312-6187-46FF-A808-6FF123F32264}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{09869312-6187-46FF-A808-6FF123F32264}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
