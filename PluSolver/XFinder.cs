@@ -71,6 +71,19 @@ namespace PluSolver
                 }
                 x[row] = (y[row] - sum) / lu[row, row];
             }
+
+            
+        }
+
+        private void CheckX()
+        {
+            for (int row = 0; row < x.Length; row++)
+            {
+                if (double.IsNaN(x[row]))
+                {
+                    throw new Exception("Error: No solution for this, AX=B, system found.");
+                }
+            }
         }
 
         public double[] Solve()
@@ -78,6 +91,7 @@ namespace PluSolver
             ReorderB();
             SolveYfromLYequalB();
             SolveXfromUXequalY();
+            CheckX();
             return x;
         }
 

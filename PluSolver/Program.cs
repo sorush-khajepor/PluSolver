@@ -15,8 +15,18 @@ namespace PluSolver
             };
             var B = new double[] { 10, 20, 30, 40, 50 };
 
-            var s = new Solver(A, B);
-            var X = s.SolveX();
+            var solver = new Solver(A, B);
+            double[] X;
+
+            try
+            {
+                 X = solver.SolveX();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            
 
             var analytical = new double[] { -4970.0 / 2383.0 ,1890.0 / 2383, 1620.0 / 2383, 1890.0 / 2383, 2520.0 / 2383};
         }
