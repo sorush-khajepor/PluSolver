@@ -8,7 +8,7 @@ namespace PluSolver
         private double[] y;
         private double[] x;
         private readonly int[] p;
-
+         
 
         private readonly int numberOfRows;
         private readonly int numberOfColumns;
