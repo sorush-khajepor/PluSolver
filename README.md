@@ -1,6 +1,6 @@
 # PluSolver
 
-[![Build status](https://dev.azure.com/sorushkh/BuildPluSolver/_apis/build/status/BuildPluSolver-ASP.NET%20Core%20(.NET%20Framework)-CI)](https://dev.azure.com/sorushkh/BuildPluSolver/_build/latest?definitionId=-1)
+[![Build status](https://dev.azure.com/sorushkh/BuildPluSolver/_apis/build/status/BuildPluSolver-CI)](https://dev.azure.com/sorushkh/BuildPluSolver/_build/latest?definitionId=5)
 
 
 PluSolver is a Compact PLU decomposition (factorization) solver of a system of linear equations, AX=B. 
