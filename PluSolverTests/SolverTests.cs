@@ -1,19 +1,17 @@
-using Microsoft.VisualStudio.TestTools.UnitTesting;
+using NUnit.Framework;
 using System;
 using PluSolver;
 
-
 namespace PluSolverTests
 {
-    [TestClass]
     public class SolverTests
     {
         private bool IsEqual(double a, double b)
         {
-            return (Math.Abs(a - b) < 1e-10) ;
+            return (Math.Abs(a - b) < 1e-10);
         }
 
-        [TestMethod]
+        [Test]
         public void Test_2Unknows()
         {
             double[,] A = new double[,] {
@@ -23,7 +21,7 @@ namespace PluSolverTests
             var B = new double[] { 5, 5 };
 
             var solver = new Solver(A, B);
-            double[] X=null;
+            double[] X = null;
 
             try
             {
@@ -33,13 +31,13 @@ namespace PluSolverTests
             {
                 Assert.Fail();
             }
-            
+
 
             Assert.IsTrue(IsEqual(X[0], 1) && IsEqual(X[1], 2));
 
         }
 
-        [TestMethod]
+        [Test]
         public void Test_3Unknows()
         {
             double[,] A = new double[,] {
@@ -64,11 +62,11 @@ namespace PluSolverTests
 
             Assert.IsTrue(IsEqual(X[0], 1) &&
                           IsEqual(X[1], 2) &&
-                          IsEqual(X[2],3));
+                          IsEqual(X[2], 3));
 
         }
 
-        [TestMethod]
+        [Test]
         public void Test_4Unknows()
         {
             double[,] A = new double[,] {
@@ -77,7 +75,7 @@ namespace PluSolverTests
                 { 2,  1, 3, 1},
                 { 1,  1, 1, 2}
             };
-            var B = new double[] {16, 18, 17, 14};
+            var B = new double[] { 16, 18, 17, 14 };
 
             var solver = new Solver(A, B);
             double[] X = null;
@@ -99,7 +97,7 @@ namespace PluSolverTests
 
         }
 
-        [TestMethod]
+        [Test]
         public void Test_5Unknows()
         {
             double[,] A = new double[,] {
@@ -109,7 +107,7 @@ namespace PluSolverTests
                 { 31, 32, 33, 25, 35},
                 { 41, 42, 43, 44, 36}
             };
-            var B = new double[] {55, 199, 334, 469, 610};
+            var B = new double[] { 55, 199, 334, 469, 610 };
 
             var solver = new Solver(A, B);
             double[] X = null;
@@ -132,7 +130,7 @@ namespace PluSolverTests
 
         }
 
-        [TestMethod]
+        [Test]
         public void Test_SingularMatrixSimilarRows_NoAnswer()
         {
             double[,] A = new double[,] {
@@ -152,12 +150,12 @@ namespace PluSolverTests
             }
             catch (Exception ex)
             {
-                Assert.IsTrue(true) ;
-            }            
+                Assert.IsTrue(true);
+            }
 
         }
 
-        [TestMethod]
+        [Test]
         public void Test_SingularMatrixOneColumnZero_NoAnswer()
         {
             double[,] A = new double[,] {
@@ -182,6 +180,6 @@ namespace PluSolverTests
 
         }
 
-
     }
 }
+
