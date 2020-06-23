@@ -30,5 +30,12 @@ steps:
 
 - task: VSTest@2
   inputs:
+    testSelector: 'testAssemblies'
+    testAssemblyVer2: |
+      **\*test*.dll
+      !**\*TestAdapter.dll
+      !**\obj\**
+    searchFolder: '$(System.DefaultWorkingDirectory)'
+    otherConsoleOptions: '/Framework:.NETCoreApp,Version=v3.1'
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
