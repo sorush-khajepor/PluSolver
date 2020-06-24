@@ -33,7 +33,30 @@ to find X. But what is P? in the first step of decomposition A = LU, most of the
 
 ## Usage
 
-//TODO
+```c#
+// Inside a method or main program
+double[,] A = new double[,] 
+{
+  { 1,  2},
+  { 3,  1}
+};
+
+var B = new double[] { 5, 5 };
+
+var solver = new Solver(A, B);
+double[] X = null;
+
+try
+{
+  X = solver.SolveX();
+}
+catch (Exception ex);
+{
+  Console.Write(ex.Message());
+}
+
+// rest of the code
+```
 
 
 
