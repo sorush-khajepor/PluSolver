@@ -100,9 +100,9 @@ namespace PluSolver
 
             for (int row = rowAfterDiagonal; row < numberOfRows; row++)
             {
-                if (A[row, focusedColumn] > maxElement)
+                if (Math.Abs(A[row, focusedColumn]) > maxElement)
                 {
-                    maxElement = A[row, focusedColumn];
+                    maxElement = Math.Abs(A[row, focusedColumn]);
                     rowOfMaxElement = row;
                 }
             }
