@@ -42,17 +42,6 @@ namespace PluSolver
             }
         }
 
-        private double[,] CreateIdentityMatrix(int size)
-        {
-            var identity = new double[size, size];
-
-            for (int i = 0; i < size; i++)
-            {
-                identity[i, i] = 1;
-            }
-            return identity;
-        }
-
         public (int[], double[,]) FindPAndCombinedLU()
         {
             ConvertAtoLU();
