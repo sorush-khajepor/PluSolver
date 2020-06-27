@@ -5,14 +5,14 @@ namespace PluSolver
     {
 
         private double[,] A;
+        private int[] P;
 
         private SubMatrixBoundariess LowerTriangleBounds;
         private int numberOfColumns;
         private int numberOfRows;
 
-        public int[] P { get; private set; }
+        
 
-        public double[,] GetData() { return A; }
 
         public PluDecomposer(double[,] A)
         {
