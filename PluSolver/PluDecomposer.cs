@@ -57,12 +57,12 @@ namespace PluSolver
         {
             for (int column = LowerTriangleBounds.StartColumn; column < LowerTriangleBounds.EndColumn; column++)
             {
-                SwapMaxRowWithDiagonal(column);
+                MakeSureDiagonalElementIsMaximum(column);
                 MakeColumnZero(column);
             }
         }
 
-        private void SwapMaxRowWithDiagonal(int focusedColumn)
+        private void MakeSureDiagonalElementIsMaximum(int focusedColumn)
         {
 
             var rowOfDiagonal = focusedColumn;
@@ -137,7 +137,8 @@ namespace PluSolver
                 A[elementRow, col] += rowMultiplier * A[elementColumn, col];
             }
 
-            A[elementRow, elementColumn] = -rowMultiplier;
+            var lowerMatrixElement = -rowMultiplier;
+            A[elementRow, elementColumn] = lowerMatrixElement;
         }
 
 
