@@ -24,7 +24,6 @@ namespace PluSolver
 
             return xFinder.Solve();
         }
-
         
     }
 }
