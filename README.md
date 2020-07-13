@@ -13,7 +13,7 @@ In this way, all the memory could have taken by zeros in P, L and U is saved. Th
 Inject A and B in an instance of `Solver` then get the result from `Solver.SolveX()` method. 
 
 * If there is no answer to the system, an exception is raised which you can catch.
-* As the method is compact, A matrix is modified inside SolveX() method. So, if you want to keep A, inject a
+* As the method is compact, A matrix is modified inside `SolveX()` method. So, if you want to keep A, inject a
 clone of it.
 
 ```c#
