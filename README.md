@@ -3,8 +3,9 @@
 [![Build status](https://dev.azure.com/sorushkh/BuildPluSolver/_apis/build/status/BuildPluSolver-CI)](https://dev.azure.com/sorushkh/BuildPluSolver/_build/latest?definitionId=5)
 
 
-PluSolver is a Compact PLU or LU decomposition (factorization) solver of a system of linear equations, AX=B. 
-It is compact as both Lower matrix and upper matrix are stored in A matrix. Moreover, Permutation matrix, P, is stored in a vector. 
+PluSolver is a Compact PLU or LU decomposition (factorization) solver of a system of linear equations, AX=B. I wrote a post explaining this code in detail on my [weblog](https://iamsorush.com/posts/lu_decomposition/).
+
+PluSolver is compact as both Lower matrix and upper matrix are stored in A matrix. Moreover, Permutation matrix, P, is stored in a vector. 
 In this way, all the memory could have taken by zeros in P, L and U is saved. The code is written in C#, so it's suitable for .Net applications.
  
 
